@@ -6,6 +6,7 @@ Basic game logic and components are implemented.
 
 Future plans
 No persistance, no rest api, no ai, no ui yet.
+TODO Also 2 box set rules with upto 8 players in team play.
 
 Basic interactions:
 
