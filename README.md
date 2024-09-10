@@ -9,7 +9,7 @@ No persistance, no rest api, no ai, no ui yet.
 TODO Also 2 box set rules with upto 8 players in team play.
 
 Basic interactions:
-
+```
 The config is:
 constructor(countPlayers: number, theMightyDuel = false, harmony = false, middleKingdom = false, dynasty = false)
 
@@ -48,7 +48,7 @@ The game generates a list of valid placements and you need to choose one by inde
 Internal scoring could be used by AI to figgure out what tiles is best to choose and where to place it for the most points.
 
 Plan is to add expansions and other variants of the game after implementing persistance, rest api, ai, and a basic web ui
-
+```
 # Next.js + Jest
 
 This example shows how to configure Jest to work with Next.js.
