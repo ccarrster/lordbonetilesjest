@@ -5,7 +5,7 @@ Rules of a similar game: https://blueorangegames.eu/wp-content/uploads/2017/04/K
 Basic game logic and components are implemented.
 
 Future plans
-No persistance, no rest api, no ai, no ui yet.
+no rest api, no ai, no ui yet.
 TODO Also 2 box set rules with upto 8 players in team play.
 
 Basic interactions:
@@ -47,7 +47,27 @@ They are also terrain groups
 The game generates a list of valid placements and you need to choose one by index, perhaps in the future you could send placement information back instead.
 Internal scoring could be used by AI to figgure out what tiles is best to choose and where to place it for the most points.
 
-Plan is to add expansions and other variants of the game after implementing persistance, rest api, ai, and a basic web ui
+Persistance
+
+import { store, load } from "./storelordbonetiles";
+
+Storing:
+let newConfig: config = new config(4);
+let newGame: game = new game(newConfig, 'start');
+let gameId = await store(newGame);
+
+Loading:
+let loadGame = await load(gameId);
+
+The plan is to wrap a rest api around this mongodb storage interface.
+
+Get calls will just get the game.
+Get calls for options.
+Post calls to choose an option.
+
+For the moment it stores each time under a new ID. I think we may have to retain a perstant game id.
+
+Plan is to add expansions and other variants of the game rest api, ai, and a basic web ui
 ```
 # Next.js + Jest
 
