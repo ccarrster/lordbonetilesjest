@@ -652,8 +652,6 @@ export function getDynastyWinners(games: game[]){
             totals[i] += game.getScoreTotal(game.kingdoms[i]);
         }
     });
-    console.log('totals');
-    console.log(totals);
     var maxTotal = -1;
     var maxIndexes: string[] = [];
     for(var j = 0; j < totals.length; j++){

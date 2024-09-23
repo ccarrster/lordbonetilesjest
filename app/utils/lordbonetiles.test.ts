@@ -218,16 +218,12 @@ test("Count wrong on domino stack", () => {
     options.options.forEach((option) => {
         numbers.push(option.number);
     });
-    console.log(options);
     testGame.chooseOption(numbers[0]);
     options = testGame.getOptions();
-    console.log(options);
     testGame.chooseOption(numbers[1]);
     options = testGame.getOptions();
-    console.log(options);
     testGame.chooseOption(numbers[2]);
     options = testGame.getOptions();
-    console.log(options);
     expect(options.options.length).toBe(1);
   });
 
@@ -600,7 +596,6 @@ test("Count wrong on domino stack", () => {
         }
       }
     }
-    console.log(testGame.kingdoms[0].score);
     expect(testGame.getScoreTotal(testGame.kingdoms[0])).toBe(5);
   });
 
@@ -633,7 +628,6 @@ test("Count wrong on domino stack", () => {
         }
       }
     }
-    console.log(testGame.kingdoms[0].score);
     expect(testGame.getScoreTotal(testGame.kingdoms[0])).toBe(5);
   });
 
@@ -666,7 +660,6 @@ test("Count wrong on domino stack", () => {
         }
       }
     }
-    console.log(testGame.kingdoms[0].score);
     expect(testGame.getScoreTotal(testGame.kingdoms[0])).toBe(10);
   });
 
@@ -699,7 +692,6 @@ test("Count wrong on domino stack", () => {
         }
       }
     }
-    console.log(testGame.kingdoms[0].score);
     expect(testGame.getScoreTotal(testGame.kingdoms[0])).toBe(10);
   });
 
@@ -732,7 +724,6 @@ test("Count wrong on domino stack", () => {
         }
       }
     }
-    console.log(testGame.kingdoms[0].score);
     expect(testGame.getScoreTotal(testGame.kingdoms[0])).toBe(0);
   });
 
@@ -805,10 +796,6 @@ test("Count wrong on domino stack", () => {
     testGame.kingdoms[1].group.push(new concreteSquare(new terrainLocation(0, 1), new terrainSquare('mines', 0)));
     testGame.kingdoms[1].group.push(new concreteSquare(new terrainLocation(0, 2), new terrainSquare('mines', 0)));
     testGame.getScores();
-    console.log(testGame.getLargestTerritory(testGame.kingdoms[0]));
-    console.log(testGame.getLargestTerritory(testGame.kingdoms[1]));
-    console.log(testGame.getLargestTerritory(testGame.kingdoms[2]));
-    console.log(testGame.getLargestTerritory(testGame.kingdoms[3]));
     expect(testGame.getWinners().length).toBe(2);
     expect(testGame.getWinners()[0]).toBe('pink');
     expect(testGame.getWinners()[1]).toBe('blue');
@@ -877,3 +864,13 @@ test("Count wrong on domino stack", () => {
     expect(dynastyWinners[1]).toBe('blue');
 
   });
+
+/*
+I think all game rules are covered here
+So what should I do next?
+Persistance
+API
+UI
+AI
+Expansions
+*/
